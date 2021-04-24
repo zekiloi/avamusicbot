@@ -76,16 +76,6 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     img = Image.open("temp.png")
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("etc/font.otf", 32)
-    draw.text((190, 550), f"Judul: {title}", (255, 255, 255), font=font)
-    draw.text(
-        (190, 590), f"Durasi: {duration}", (255, 255, 255), font=font
-    )
-    draw.text((190, 630), f"Penonton: {views}", (255, 255, 255), font=font)
-    draw.text((190, 670),
-        f"Added By: {requested_by}",
-        (255, 255, 255),
-        font=font,
-    )
     img.save("final.png")
     os.remove("temp.png")
     os.remove("background.png")
@@ -125,7 +115,7 @@ async def play(_, message: Message):
 
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/b425ff724e6957805877b.jpg"
+        thumb_name = "https://telegra.ph/file/6fd5b832331a40045809e.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -148,7 +138,7 @@ async def play(_, message: Message):
     elif url:
         try:
             results = YoutubeSearch(url, max_results=1).to_dict()
-           # url = f"https://youtube.com{results[0]['url_suffix']}"
+            #url = f"https://youtube.com{results[0]['url_suffix']}"
             #print(results)
             title = results[0]["title"][:40]       
             thumbnail = results[0]["thumbnails"][0]
@@ -170,7 +160,7 @@ async def play(_, message: Message):
                 )
         except Exception as e:
             title = "NaN"
-            thumb_name = "https://telegra.ph/file/b425ff724e6957805877b.jpg"
+            thumb_name = "https://telegra.ph/file/6fd5b832331a40045809e.jpg"
             duration = "NaN"
             views = "NaN"
             keyboard = InlineKeyboardMarkup(
@@ -247,7 +237,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="▶️ **Playing** here the song requested by {} via YouTube 🎵".format(
+        caption=**🏷 Judul:** {title}\n **⏰ Durasi:** {duration}\n **⏳ Status:** Playing\n **Requested by:** {requested_by}".format(
         message.from_user.mention()
         ),
     )
