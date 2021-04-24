@@ -76,11 +76,11 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     img = Image.open("temp.png")
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("etc/font.otf", 32)
-    draw.text((190, 550), f"Title: {title}", (255, 255, 255), font=font)
+    draw.text((190, 550), f"Judul: {title}", (255, 255, 255), font=font)
     draw.text(
-        (190, 590), f"Duration: {duration}", (255, 255, 255), font=font
+        (190, 590), f"Durasi: {duration}", (255, 255, 255), font=font
     )
-    draw.text((190, 630), f"Views: {views}", (255, 255, 255), font=font)
+    draw.text((190, 630), f"Penonton: {views}", (255, 255, 255), font=font)
     draw.text((190, 670),
         f"Added By: {requested_by}",
         (255, 255, 255),
@@ -97,7 +97,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
 @errors
 async def play(_, message: Message):
 
-    lel = await message.reply("🔄 **Processing** Sounds...")
+    lel = await message.reply("🔄 Processing Sounds...")
     sender_id = message.from_user.id
     sender_name = message.from_user.first_name
 
@@ -105,8 +105,10 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="Channel",
-                        url="https://t.me/Infinity_BOTs")
+                        text="Channel Bucin",
+                        url="https://t.me/Kutipankataaa")
+                ],[
+                    InlineKeyboardButton("Close",'cls') 
                    
                 ]
             ]
@@ -123,7 +125,7 @@ async def play(_, message: Message):
 
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/638c20c44ca418c8b2178.jpg"
+        thumb_name = "https://telegra.ph/file/b425ff724e6957805877b.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -131,8 +133,8 @@ async def play(_, message: Message):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Channel",
-                            url=f"https://t.me/Infinity_Bots")
+                            text="Channel Info",
+                            url=f"https://t.me/AkuUserBot")
 
                     ]
                 ]
@@ -160,23 +162,23 @@ async def play(_, message: Message):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Watch On YouTube",
-                                url=f"{url}")
+                                text="Follow Instagram 🌻",
+                                url=f"https://instagram.com/hendraputraaaaaa")
 
                         ]
                     ]
                 )
         except Exception as e:
             title = "NaN"
-            thumb_name = "https://telegra.ph/file/638c20c44ca418c8b2178.jpg"
+            thumb_name = "https://telegra.ph/file/b425ff724e6957805877b.jpg"
             duration = "NaN"
             views = "NaN"
             keyboard = InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton(
-                                text="Watch On YouTube",
-                                url=f"https://youtube.com")
+                                text="Support Group",
+                                url=f"https://t.me/VcgSupportGroup")
 
                         ]
                     ]
@@ -185,7 +187,7 @@ async def play(_, message: Message):
         await generate_cover(requested_by, title, views, duration, thumbnail)     
         file_path = await converter.convert(youtube.download(url))
     else:
-        await lel.edit("🔎 **Finding** the song...")
+        await lel.edit("🔎 Finding the song...")
         sender_id = message.from_user.id
         user_id = message.from_user.id
         sender_name = message.from_user.first_name
@@ -196,7 +198,7 @@ async def play(_, message: Message):
         for i in message.command[1:]:
             query += ' ' + str(i)
         print(query)
-        await lel.edit("🎵 **Processing** sounds...")
+        await lel.edit("🎵 Processing sounds...")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -222,8 +224,8 @@ async def play(_, message: Message):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Watch On YouTube",
-                            url=f"{url}")
+                            text="Follow Instagram 🌻",
+                            url=f"https://instagram.com/hendraputraaaaaa")
 
                     ]
                 ]
