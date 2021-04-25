@@ -9,11 +9,11 @@ from helpers.filters import other_filters2
 async def start(_, message: Message):
     await message.reply_sticker("CAADBQADKAIAAmQgIVd2e584kTrkUgI")
     await message.reply_text(
-        f"""**Hai 👋🏻, I am {bn} 🎵
+        f"""Hai 👋🏻, I am Sujandra 🎵
 
 I can play music in your group's voice call. Developed by [Hendra](https://t.me/IamYourEnemy).
 
-Add me to your group and play music freely!**
+Add me to your group and play music freely!
         """,
         reply_markup=InlineKeyboardMarkup(
             [
@@ -43,7 +43,7 @@ async def gstart(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "Follow Instagram 🌻", url="https://instagram.com/hendraputraaaaaa")
+                        "Support Channel 🌻", url="https://t.me/AkuUserBot")
                 ]
             ]
         )
