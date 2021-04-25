@@ -238,7 +238,7 @@ async def play(_, message: Message):
         photo="final.png",
         reply_markup=keyboard,
         caption=f"🏷 **Title:** [{title[:35]}]({url})\n **Duration:** {duration}\n" \
-                + f"💡 **Status:** Playing\n🎧 **Requested by:** {}".format(
+                + f"💡 **Status:** Playing\n🎧 **Requested by:** {requested_by}".format(
         message.from_user.mention()
         ),
     )
