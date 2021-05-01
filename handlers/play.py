@@ -226,19 +226,33 @@ async def play(_, message: Message):
   
     if message.chat.id in callsmusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)
+        qeue = que.get(message.chat.id)
+        s_name = title
+        r_by = message.from_user
+        loc = file_path
+        appendable = [s_name, r_by, loc]
+        qeue.append(appendable)
         await message.reply_photo(
         photo="final.png", 
-        caption=f"#⃣ Your requested song **queued** at position {position}!",
+        caption=f"#⃣ Your requested song **queued** at position {position}!**",
         reply_markup=keyboard)
         os.remove("final.png")
         return await lel.delete()
     else:
+        chat_id = message.chat.id
+        que[chat_id] = []
+        qeue = que.get(message.chat.id)
+        s_name = title            
+        r_by = message.from_user
+        loc = file_path
+        appendable = [s_name, r_by, loc]      
+        qeue.append(appendable)
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption=f"🏷 **Title:** [{title[:45]}]({url})\n **⏱ Duration:** {duration}\n" \
-                + f"💡 **Status:** Playing\n🎧 **Requested by:** {requested_by}".format(
+        caption=f"🏷 **Judul:** [{title[:45]}]({url})\n **⏱ Durasi:** {duration}\n" \
+                + f"💡 **Status:** Playing\n🎧 **Permintaan:** {requested_by}".format(
         message.from_user.mention()
         ),
     )
