@@ -240,7 +240,6 @@ async def play(_, message: Message):
         return await lel.delete()
     else:
         chat_id = message.chat.id
-        que[chat_id] = []
         qeue = que.get(message.chat.id)
         s_name = title            
         r_by = message.from_user
