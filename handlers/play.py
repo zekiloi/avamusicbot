@@ -1,9 +1,10 @@
 from os import path
 
-from pyrogram import Client, filters
+from pyrogram import Client
 from pyrogram.types import Message, Voice
 
 from callsmusic import callsmusic, queues
+
 from os import path
 import requests
 import aiohttp
@@ -115,7 +116,7 @@ async def play(_, message: Message):
 
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/6fd5b832331a40045809e.jpg"
+        thumb_name = "https://telegra.ph/file/c364d2f8144c33bd301d5.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -160,7 +161,7 @@ async def play(_, message: Message):
                 )
         except Exception as e:
             title = "NaN"
-            thumb_name = "https://telegra.ph/file/6fd5b832331a40045809e.jpg"
+            thumb_name = "https://telegra.ph/file/c364d2f8144c33bd301d5.jpg"
             duration = "NaN"
             views = "NaN"
             keyboard = InlineKeyboardMarkup(
