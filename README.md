@@ -1,4 +1,4 @@
-<h2 align="centre">SUJANDRA MUSIK</h2>
+<h2 align="centre">AVA MUSIC</h2>
 
 ### A bot that can play music on telegram group's voice call
 
