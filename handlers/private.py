@@ -9,27 +9,27 @@ from helpers.filters import other_filters2
 async def start(_, message: Message):
     await message.reply_sticker("CAADBQADKAIAAmQgIVd2e584kTrkUgI")
     await message.reply_text(
-        f"""Hai 👋🏻, I am Sujandra 🎵
+        f"""hai 👋🏻, nama saya ava music bot, saya dapat memutar lagu di voice chat group anda.
 
-I can play music in your group's voice call. Developed by [Hendra](https://t.me/IamYourEnemy).
+➠ Tekan tombol panduan menggunakan bot di bawah jika ingin mengetahui bagaimana cara menggunakan saya.
 
-Add me to your group and play music freely!
+➠ Tambahkan juga [ava asisstant](htttps://t.me/avaasisstant) ke dalam grup jika anda ingin menambahkan saya ke grup anda.
         """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🎛 Commands", url="https://telegra.ph/Sujandra-Musik-04-24")
+                        "📚 Panduan Menggunakan Bot", url="https://telegra.ph/ava-command-list-05-27")
                   ],[
                     InlineKeyboardButton(
-                        "💬 Group", url="https://t.me/VcgSupportGroup"
+                        "💬 Group Support", url="https://t.me/gcsupportbots"
                     ),
                     InlineKeyboardButton(
-                        "🔊 Channel", url="https://t.me/Kutipankataaa"
+                        "🔊 Channel Support", url="https://t.me/levinachannel"
                     )
                 ],[ 
                     InlineKeyboardButton(
-                        "🎁 Donasi", url="https://t.me/IamYourEnemy"
+                        "🎁 Kirim Donasi", url="https://t.me/dlwrml"
                     )]
             ]
         ),
@@ -38,12 +38,12 @@ Add me to your group and play music freely!
 
 @Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
-      await message.reply_text("""**Sujandra Music Player Online ✅**""",
+      await message.reply_text("""**✅ ava music player is online**""",
       reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Support Channel 🌻", url="https://t.me/AkuUserBot")
+                        "🌺 Channel Support", url="https://t.me/levinachannel")
                 ]
             ]
         )
