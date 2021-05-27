@@ -114,7 +114,7 @@ async def play(_, message: Message):
 
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/c364d2f8144c33bd301d5.jpg"
+        thumb_name = "https://telegra.ph/file/b50acacedad29f5abd2ca.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -122,8 +122,8 @@ async def play(_, message: Message):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Channel Info",
-                            url=f"https://t.me/AkuUserBot")
+                            text="Channel Support",
+                            url=f"https://t.me/levinachannel")
 
                     ]
                 ]
@@ -151,23 +151,23 @@ async def play(_, message: Message):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Follow Instagram 🌻",
-                                url=f"https://instagram.com/hendraputraaaaaa")
+                                text="🌺 Channel Support",
+                                url=f"https://t.me/levinachannel")
 
                         ]
                     ]
                 )
         except Exception as e:
             title = "NaN"
-            thumb_name = "https://telegra.ph/file/c364d2f8144c33bd301d5.jpg"
+            thumb_name = "https://telegra.ph/file/b50acacedad29f5abd2ca.jpg"
             duration = "NaN"
             views = "NaN"
             keyboard = InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton(
-                                text="Support Group",
-                                url=f"https://t.me/VcgSupportGroup")
+                                text="Group Group",
+                                url=f"https://t.me/gcsupportbots")
 
                         ]
                     ]
@@ -176,7 +176,7 @@ async def play(_, message: Message):
         await generate_cover(requested_by, title, views, duration, thumbnail)     
         file_path = await converter.convert(youtube.download(url))
     else:
-        await lel.edit("🔎 Finding the song...")
+        await lel.edit("🔎 menemukan lagu...")
         sender_id = message.from_user.id
         user_id = message.from_user.id
         sender_name = message.from_user.first_name
@@ -187,7 +187,7 @@ async def play(_, message: Message):
         for i in message.command[1:]:
             query += ' ' + str(i)
         print(query)
-        await lel.edit("🎵 Processing sounds...")
+        await lel.edit("🎵 mempersiapkan lagu...")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -204,7 +204,7 @@ async def play(_, message: Message):
 
         except Exception as e:
             lel.edit(
-                "❌ Song not found.\n\nTry another song or maybe spell it properly."
+                "❌ lagu tidak ditemukan.\n\ncoba cari dengan judul atau nama lagu yang lebih jelas."
             )
             print(str(e))
             return
@@ -213,8 +213,8 @@ async def play(_, message: Message):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Follow Instagram 🌻",
-                            url=f"https://instagram.com/hendraputraaaaaa")
+                            text="🌺 Channel Suuport",
+                            url=f"https://t.me/levinachannel")
 
                     ]
                 ]
