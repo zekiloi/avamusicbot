@@ -1,8 +1,9 @@
 {
-  "name": "Music Bot",
+  "name": "ava music",
   "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/Ependelope53/SujandraMusik",
+  "logo": "https://telegra.ph/file/bc46914ce71dca2f82195.jpg",
+  "repository": "https://github.com/levina-lab/avamusicbot",
   "stack": "container",
   "env": {
     "SESSION_NAME": {
