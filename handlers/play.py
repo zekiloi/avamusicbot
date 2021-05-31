@@ -94,7 +94,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="Channel Support",
+                        text="🌺 CHANNEL",
                         url="https://t.me/levinachannel")
                 ],[
                     InlineKeyboardButton("🗑 Close",'cls') 
@@ -117,12 +117,12 @@ async def play(_, message: Message):
         thumb_name = "https://telegra.ph/file/b50acacedad29f5abd2ca.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
-        views = "Locally added"
+        views = "locally added"
         keyboard = InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="Channel Support",
+                            text="🌺 CHANNEL",
                             url=f"https://t.me/levinachannel")
 
                     ]
@@ -151,7 +151,7 @@ async def play(_, message: Message):
                     [
                         [
                             InlineKeyboardButton(
-                                text="🌺 Channel Support",
+                                text="🌺 CHANNEL",
                                 url=f"https://t.me/levinachannel")
 
                         ]
@@ -166,7 +166,7 @@ async def play(_, message: Message):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Group Group",
+                                text="💬 GROUP",
                                 url=f"https://t.me/gcsupportbots")
 
                         ]
@@ -187,7 +187,7 @@ async def play(_, message: Message):
         for i in message.command[1:]:
             query += ' ' + str(i)
         print(query)
-        await lel.edit("🎵 mempersiapkan lagu...")
+        await lel.edit("🎵 memutar lagu...")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -213,7 +213,7 @@ async def play(_, message: Message):
                 [
                     [
                         InlineKeyboardButton(
-                            text="🌺 Channel Suuport",
+                            text="🌺 CHANNEL",
                             url=f"https://t.me/levinachannel")
 
                     ]
@@ -227,7 +227,7 @@ async def play(_, message: Message):
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
         photo="final.png", 
-        caption=f"#⃣ Your requested song **queued** at position {position}!",
+        caption=f"#⃣ lagu yang anda minta **mengantri** di posisi {position}!",
         reply_markup=keyboard)
         os.remove("final.png")
         return await lel.delete()
