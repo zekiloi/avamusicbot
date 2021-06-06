@@ -9,17 +9,17 @@ from helpers.filters import other_filters2
 async def start(_, message: Message):
     await message.reply_sticker("CAACAgUAAxkBAAEKORJguwR4VsN1PCqbNh82LgABstqGU2EAAjMCAAK8hthX2HwTiIOxnxofBA")
     await message.reply_text(
-        f"""hai 👋🏻, nama saya ava music bot, saya dapat memutar lagu di voice chat group anda.
+        f"""hai 👋🏻, nama saya zonix bot, saya dapat memutar lagu di voice chat group anda.
 
 ➠ Tekan tombol panduan menggunakan bot di bawah jika ingin mengetahui bagaimana cara menggunakan saya.
 
-➠ Tambahkan juga [ava asisstant](htttps://t.me/avaasisstant) ke dalam grup jika anda ingin menambahkan saya ke grup anda.
+➠ Tambahkan juga [zonix asst](htttps://t.me/zonix_asst) ke dalam grup jika anda ingin menambahkan saya ke grup anda.
         """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "📚 Panduan Menggunakan Bot", url="https://instagram.com/zekiloil/")
+                        "Owner Ig", url="https://instagram.com/zekiloil/")
                   ],[
                     InlineKeyboardButton(
                         "panduan singkat", url="https://telegra.ph/aaksnsn-06-06"
