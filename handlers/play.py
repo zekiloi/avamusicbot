@@ -95,7 +95,7 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                         text="🌺 CHANNEL",
-                        url="https://t.me/levinachannel")
+                        url="https://t.me/randfeels")
                 ],[
                     InlineKeyboardButton("🗑 Close",'cls') 
                    
@@ -123,7 +123,7 @@ async def play(_, message: Message):
                     [
                         InlineKeyboardButton(
                             text="🌺 CHANNEL",
-                            url=f"https://t.me/levinachannel")
+                            url=f"https://t.me/randfeels")
 
                     ]
                 ]
@@ -152,7 +152,7 @@ async def play(_, message: Message):
                         [
                             InlineKeyboardButton(
                                 text="🌺 CHANNEL",
-                                url=f"https://t.me/levinachannel")
+                                url=f"https://t.me/randfeels")
 
                         ]
                     ]
@@ -213,8 +213,13 @@ async def play(_, message: Message):
                 [
                     [
                         InlineKeyboardButton(
-                            text="🌺 CHANNEL",
-                            url=f"https://t.me/levinachannel")
+                            text="Owner Ig",
+                            url=f"https://instagram.com/zekiloi"),
+
+
+                        InlineKeyboardButton(
+                            text="Channel Bucin",
+                            url=f"https://t.me/randfeels")
 
                     ]
                 ]
