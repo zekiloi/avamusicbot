@@ -19,17 +19,13 @@ async def start(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "📚 Panduan Menggunakan Bot", url="https://telegra.ph/ava-command-list-05-27")
+                        "📚 Panduan Menggunakan Bot", url="https://instagram.com/zekiloil/")
                   ],[
                     InlineKeyboardButton(
-                        "💬 Group Support", url="https://t.me/gcsupportbots"
+                        "panduan singkat", url="https://telegra.ph/aaksnsn-06-06"
                     ),
                     InlineKeyboardButton(
-                        "🔊 Channel Support", url="https://t.me/levinachannel"
-                    )
-                ],[ 
-                    InlineKeyboardButton(
-                        "🎁 Kirim Donasi", url="https://t.me/dlwrml"
+                        "🔊 Channel Bucin", url="https://t.me/randfeels"
                     )]
             ]
         ),
@@ -43,7 +39,7 @@ async def gstart(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🌺 Channel Support", url="https://t.me/levinachannel")
+                        "Owner Ig", url="https://instagram.com/zekiloi/")
                 ]
             ]
         )
