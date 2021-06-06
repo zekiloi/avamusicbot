@@ -34,7 +34,7 @@ async def start(_, message: Message):
 
 @Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
-      await message.reply_text("""**✅ ava music player is online**""",
+      await message.reply_text("""**✅ zonix music player is online**""",
       reply_markup=InlineKeyboardMarkup(
             [
                 [
