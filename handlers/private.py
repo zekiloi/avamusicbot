@@ -7,7 +7,7 @@ from helpers.filters import other_filters2
 
 @Client.on_message(other_filters2)
 async def start(_, message: Message):
-    await message.reply_sticker("CAACAgUAAxkBAAEKORJguwR4VsN1PCqbNh82LgABstqGU2EAAjMCAAK8hthX2HwTiIOxnxofBA")
+    await message.reply_sticker("CAACAgUAAxkBAAEKPpJgvO_HaOC2Gdc2zauUCIJbZLVEkAACLQMAAlgn6VVtRx2iTWsNwB8E")
     await message.reply_text(
         f"""hai 👋🏻, nama saya zonix bot, saya dapat memutar lagu di voice chat group anda.
 
