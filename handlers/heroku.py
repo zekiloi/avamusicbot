@@ -221,7 +221,7 @@ async def _(event):
         pass
     else:
         return
-    await event.edit("**Restarted Jisoo**")
+    await event.edit("**Restarted Bot**")
     try:
         herokuHelper = HerokuHelper(HEROKU_APP_NAME, HEROKU_API_KEY)
         herokuHelper.restart()
