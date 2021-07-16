@@ -5,10 +5,12 @@ python-dotenv
 youtube_dl
 youtube_search_python
 requests
-aiohttp
+aiohttp>=2.2.5
 aiofiles
 asyncio
 youtube_search
 search_engine_parser
 ffmpeg
-Pillow
+Pillow>=4.2.0
+heroku3
+Telethon==1.16.4
