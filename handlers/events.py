@@ -1,5 +1,4 @@
 from telethon import events
-from avamusicbot import telethn
 
 
 def register(**args):
