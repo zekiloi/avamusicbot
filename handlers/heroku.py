@@ -6,7 +6,7 @@ import heroku3
 import requests
 
 from JisooX import telethn as borg, HEROKU_APP_NAME, HEROKU_API_KEY, SUDO_USERS
-from JisooX.events import register
+from handlers.events import register
 
 heroku_api = "https://api.heroku.com"
 Heroku = heroku3.from_key(HEROKU_API_KEY)
